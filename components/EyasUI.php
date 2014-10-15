@@ -5,7 +5,7 @@
 class EyasUI extends CApplicationComponent
 {
 
-	public $forceCopyAssets = false;
+	public $forceCopyAssets = true;
 
 	protected $_assetsUrl;
 

@@ -5,7 +5,7 @@ Eyas UI theme is a free UI component.  Official website: [http://www.56hm.com/Ey
 
 # version #
 
-##### build: 1.0.0 #####
+##### build: 1.1.0 #####
 
 
 

@@ -1,0 +1,98 @@
+.btn {
+  display: inline-block;
+  background-image: none;
+  border: solid 1px transparent;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 6px 12px;
+}
+a.btn {
+  text-decoration: none;
+}
+/******************************************************************
+ * Theme
+ *****************************************************************/
+.btn {
+  border-color: transparent;
+  background-color: #2e76e1;
+  color: #ffffff;
+}
+.btn:hover {
+  border-color: transparent;
+  background-color: #1460d1;
+  color: #ffffff;
+}
+.btn-primary {
+  border-color: #cccccc;
+  background-color: #ffffff;
+  color: #666666;
+}
+.btn-primary:hover {
+  border-color: #cccccc;
+  background-color: #f6f6f6;
+  color: #666666;
+}
+.btn-success {
+  border-color: transparent;
+  background-color: #5cb85c;
+  color: #ffffff;
+}
+.btn-success:hover {
+  border-color: transparent;
+  background-color: #419a41;
+  color: #ffffff;
+}
+.btn-info {
+  border-color: transparent;
+  background-color: #18d6a6;
+  color: #ffffff;
+}
+.btn-info:hover {
+  border-color: transparent;
+  background-color: #19bb92;
+  color: #ffffff;
+}
+.btn-warning {
+  border-color: transparent;
+  background-color: #f6a03c;
+  color: #ffffff;
+}
+.btn-warning:hover {
+  border-color: transparent;
+  background-color: #f0850c;
+  color: #ffffff;
+}
+.btn-error {
+  border-color: transparent;
+  background-color: #d9534f;
+  color: #ffffff;
+}
+.btn-error:hover {
+  border-color: transparent;
+  background-color: #c32f2b;
+  color: #ffffff;
+}
+.btn[disabled=disabled] {
+  border-color: #E2E2E2;
+  background-color: #FAFAFA;
+  color: #c0c0c0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.42857143;
+}
+input,
+button,
+select,
+textarea {
+  outline: none;
+}
+[disabled=disabled] {
+  cursor: not-allowed;
+}
