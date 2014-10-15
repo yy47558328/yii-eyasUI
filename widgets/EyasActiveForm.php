@@ -22,13 +22,26 @@ class EyasActiveForm extends CActiveForm
      * 开启Ajax验证.
      * @var boolean
      */
-	public $enableAjaxValidation = true;
+	public $enableAjaxValidation = false;
 
     /**
      * 开启客户端验证.
      * @var boolean
      */
 	public $enableClientValidation = true;
+
+
+
+    /**
+     * 开启验证成功后提交功能.
+     * @var array
+     */
+    public $clientOptions = array(
+       
+       'validateOnSubmit' => true,
+       'inputContainer' => 'div.control-group'
+
+    );
 
 
     /**
@@ -47,7 +60,12 @@ class EyasActiveForm extends CActiveForm
     public $htmlOptions = array();
 
 
-
+    
+    /**
+     * 错误提示class
+     * @var string
+     */
+    public $errorMessageCssClass = 'alert alert-error';
 
 
 
@@ -71,6 +89,27 @@ class EyasActiveForm extends CActiveForm
          parent::init();
 
     }
+
+    /**
+     * 错误信息集合提示面板.
+     * @param  [type] $models      [description]
+     * @param  [type] $header      [description]
+     * @param  [type] $footer      [description]
+     * @param  array  $htmlOptions [description]
+     * @return [type]              [description]
+     */
+    public function errorSummary($models, $header = null, $footer = null, $htmlOptions = array())
+    {
+        if (!isset($htmlOptions['class']))
+            $htmlOptions['class'] = 'summary summary-error';
+
+        return parent::errorSummary($models, $header, $footer, $htmlOptions);
+    }
+
+
+
+
+
 
     /**
      * text类型input表单.

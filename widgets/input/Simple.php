@@ -26,22 +26,7 @@ class Simple extends EyasInput
 	}
 
     
-	protected function hint()
-	{
-        if (isset($this->hintText))
-		{
-			$htmlOptions = $this->hintOptions;
-
-			if (isset($htmlOptions['class']))
-				$htmlOptions['class'] .= ' help-block';
-			else
-				$htmlOptions['class'] = 'help-block';
-
-			return CHtml::tag('p', $htmlOptions, $this->hintText);
-		}
-		else
-			return '';
-	}
+	
 
 
 
@@ -51,8 +36,9 @@ class Simple extends EyasInput
 
     	echo $this->label();
 		echo '<div class="controls">';
+		$this->htmlOptions['class'] = 'form-control';
 		echo $this->form->textField($this->model, $this->attribute, $this->htmlOptions);
-		echo $this->error();
+		echo $this->error().$this->hint();
 		echo '</div>';
 
     }

@@ -46,11 +46,15 @@ abstract class EyasInput extends CInputWidget
      public $errorOptions;
 
 
+/*****************************************************************
+ *  hint
+ * **************************************************************/
+    public $hintText;
+
+    public $hintOptions;
 
 
 
-
-     
 
      public function init()
      {
@@ -72,12 +76,34 @@ abstract class EyasInput extends CInputWidget
 			unset($this->htmlOptions['label']);
 		}
 
+        //labelOptions
+		if (isset($this->htmlOptions['labelOptions']))
+		{
+			$this->labelOptions = $this->htmlOptions['labelOptions'];
+			unset($this->htmlOptions['labelOptions']);
+		}
 
-        //error
+
+        //errorOptions
 		if (isset($this->htmlOptions['errorOptions']))
 		{
 			$this->errorOptions = $this->htmlOptions['errorOptions'];
 			unset($this->htmlOptions['errorOptions']);
+		}
+
+        //hintOptions
+		if (isset($this->htmlOptions['hintOptions']))
+		{
+			$this->hintOptions = $this->htmlOptions['hintOptions'];
+			unset($this->htmlOptions['hintOptions']);
+
+		}
+
+        //hint
+		if (isset($this->htmlOptions['hint']))
+		{
+			$this->hintText = $this->htmlOptions['hint'];
+			unset($this->htmlOptions['hint']);
 		}
 
 
@@ -129,6 +155,25 @@ abstract class EyasInput extends CInputWidget
 	protected function error()
 	{
 		return $this->form->error($this->model, $this->attribute, $this->errorOptions);
+	}
+
+
+	protected function hint()
+	{
+
+		if (isset($this->hintText))
+		{
+			$htmlOptions = $this->hintOptions;
+
+			if (isset($htmlOptions['class']))
+				$htmlOptions['class'] .= ' control-hint';
+			else
+				$htmlOptions['class'] = 'control-hint';
+
+			return CHtml::tag('p', $htmlOptions, $this->hintText);
+		}
+		else
+			return '';
 	}
 
 

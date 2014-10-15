@@ -1,0 +1,18 @@
+.control-group&.error
+{
+	color: @error-color;
+
+	.form-control
+	{
+        .form-control .theme(@control-border-error-color, @control-border-error-color);
+	} 
+}
+
+
+.control-group&.success
+{
+	.form-control
+	{
+        .form-control .theme(@control-border-success-color, @control-border-success-color);
+	} 
+}
