@@ -1,0 +1,23 @@
+{
+  "name": "Eyas-UI",
+  "version": "1.0.0",
+  "description": "Eyas UI theme is a free UI component",
+  "author": "Aiven, Inc.",
+  "homepage": "http://www.56hm.com/Eyas-UI/",
+  "keywords": [
+    "ui",
+    "eyas"
+  ],
+  "style": "dist/css/eyas-ui.css",
+  "less": "less/eyas-ui.less",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yy47558328/Eyas-UI.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yy47558328/Eyas-UI/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5"
+  }
+}
