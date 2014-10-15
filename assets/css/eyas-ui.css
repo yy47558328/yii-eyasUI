@@ -13,9 +13,82 @@
 a.btn {
   text-decoration: none;
 }
-/******************************************************************
- * Theme
- *****************************************************************/
+.form-control {
+  display: block;
+  width: 100%;
+  height: 30px;
+  border: solid 1px transparent;
+  background-image: none;
+  vertical-align: middle;
+  border-radius: 4px;
+  padding: 6px 12px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.summary {
+  display: block;
+  border: solid 1px transparent;
+  border-radius: 4px;
+  padding: 15px;
+}
+.summary p {
+  font-weight: 400;
+  padding-bottom: 5px;
+  font-size: 15px;
+}
+.summary ul {
+  margin-left: 25px;
+}
+.summary ul li {
+  height: 20px;
+  line-height: 20px;
+}
+.control-group {
+  display: table;
+  padding: 15px 0;
+}
+.control-group > .control-label,
+.control-group > .controls {
+  float: left;
+  line-height: 20px;
+}
+.control-group > .control-label {
+  width: 100px;
+  padding: 5px 10px 0 0;
+  text-align: right;
+}
+.control-group > .controls > .form-control {
+  width: 220px;
+}
+.control-group > .controls > .alert {
+  padding: 5px 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-family: 'Helvetica Neue', 'Microsoft YaHei', 'Helvetica', 'Arial', 'sans-serif';
+  line-height: 1.42857143;
+}
+body {
+  color: #333333;
+}
+input,
+button,
+select,
+textarea {
+  outline: none;
+}
+[disabled=disabled] {
+  cursor: not-allowed;
+}
+span.required {
+  color: #d4211c;
+}
 .btn {
   border-color: transparent;
   background-color: #2e76e1;
@@ -81,18 +154,19 @@ a.btn {
   background-color: #FAFAFA;
   color: #c0c0c0;
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  line-height: 1.42857143;
+.form-control {
+  border-color: #cccccc;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  color: #777777;
 }
-input,
-button,
-select,
-textarea {
-  outline: none;
+.form-control:focus {
+  border-color: #008ce5;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7fcdff;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #7fcdff;
 }
-[disabled=disabled] {
-  cursor: not-allowed;
+.summary-error {
+  background-color: #F2DEDE;
+  border-color: #D4AAAA;
+  color: #b94a48;
 }

@@ -1,16 +1,23 @@
 @import 'variables.less';
 @import 'components/button.less';
-
-
-
-
+@import 'components/form-control.less';
+@import 'components/summary.less';
+@import 'components/control-group.less';
 
 *
 {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-size: @font-size;
+	font-family: 'Helvetica Neue', 'Microsoft YaHei', 'Helvetica', 'Arial', 'sans-serif';
 	line-height: 1.42857143
+}
+
+
+body
+{
+    color: #333333
 }
 
 
@@ -25,3 +32,18 @@ input, button, select, textarea
 {
 	cursor: not-allowed
 }
+
+
+
+span.required
+{
+	color: #D4211C
+}
+
+
+
+
+@import 'mixins/button.less';
+@import 'mixins/form-control.less';
+@import 'mixins/vendor-prefixes.less';
+@import 'mixins/summary.less';
